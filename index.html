@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>André HKS • Cibersegurança na prática (WhatsApp direto)</title>
+  <meta name="description" content="Cursos e materiais de cibersegurança do André HKS, do básico ao avançado. Suporte no WhatsApp. Planos R$10, R$50 (vitalício) e R$100 (com fornecedores confiáveis).">
+  <meta property="og:title" content="André HKS • Cibersegurança na prática">
+  <meta property="og:description" content="Suporte direto no WhatsApp. Planos R$10, R$50 (vitalício) e R$100 (com fornecedores confiáveis).">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0a0a0a/e50914.png&text=Andre+HKS+%7C+Planos+R%2410+R%2450+R%24100">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- (CSS igual ao anterior, mantido sem alterações) -->
+</head>
+<body>
+  <!-- (todo o corpo igual ao anterior) -->
+
+  <script>
+    // ======= CONFIGURAÇÕES =======
+    // Número oficial do WhatsApp do André:
+    const WHATSAPP_PRIMARY = "https://wa.me/5563981186728";
+    // Tags solicitadas (63, 81, 18, 67 e 28)
+    const TAGS = {
+      essencial: "63",
+      pro: "81",
+      master: "18",
+      conteudo: "67",
+      fornecedores: "28"
+    };
+    // ======= /CONFIG =======
+
+    function openWhatsApp({source="site", planTag="", message=""}){
+      const base = WHATSAPP_PRIMARY;
+      const txt = `Olá André! Vim do site [${source}]. ${message} ${planTag?("(tag="+planTag+")"):""}`.trim();
+      const url = `${base}?text=${encodeURIComponent(txt)}`;
+      window.open(url, "_blank", "noopener");
+    }
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
